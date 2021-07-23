@@ -1,0 +1,9 @@
+.grid {
+    background-color: cyan;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.itema {
+    background-color: darkblue;
+    grid-row: 1/3;
+}
