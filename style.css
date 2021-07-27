@@ -1,21 +1,81 @@
-.grid {
-    background-color: cyan;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 10px;
-    padding: 10px;
+body{
+    font-family: "Raleway", sans-serif;
+    margin: auto;
+    padding: 0 10px 0 10px;
 }
-.grid > div{
-    background-color: darkblue;
-    padding: 20px 0;
-    color: white;
-    font-size: 20px;
-    order: 1;
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-#biga{
-    grid-row: 1/3;
+#logo{
+    padding-top: 30px;
 }
-#bigb{
-    grid-row: 1/3;
-    order: 2;
+nav{
+    display: flex;
+    align-items: baseline;
+}
+nav a{
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 44px 15px 0 15px;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+}
+.anchors{
+    color: black;
+    margin: 0 30px 0 30px;
+}
+nav a:hover{
+    color: #0065FC;
+    border-top-color: #0065FC;
+}
+#sign-in{
+    color: #0065FC;
+    font-weight: bold;
+}
+/*--cellphone design--*/
+@media (max-width: 600px) {
+    /*for the logo to stay in place*/
+    header{
+        align-items: stretch;
+    }
+    /*putting the logo out of the flexflow*/
+    #logo{
+        position: absolute;
+    }
+    nav{
+        flex-direction: column-reverse;/*the anchors are put at the bottom*/
+        align-items: flex-end;/*sign-in stay on the right*/
+        width: 100%;/*the flexbox takes the whole width*/
+    }
+    .navlist{
+        width: 100%;/*the anchors takes the whole width*/
+        margin-top: 15px;
+    }
+    /*center the anchors text*/
+    nav ul{
+        padding-left: 0;
+        text-align: center;
+    }
+    /*both anchors takes half the screen + border*/
+    .navlist li{
+        width: 50%;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #f2f2f2;
+    }
+    .navlist li:hover{
+        border-bottom-color: #0065FC;
+    }
+    /*remove rules for desktop*/
+    .anchors{
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+    section{
+        margin-left: 10px;
+    }
 }
