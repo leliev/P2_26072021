@@ -4,6 +4,10 @@ body{
     margin: auto;
     padding: 0 0.6em;
 }
+.limit-width{
+    max-width: 1080px;
+    margin: auto;
+}
 h1{
     margin-bottom: 0.2em;
 }
@@ -60,10 +64,15 @@ nav a:hover{
     padding: 2.8em 0.9em 0 1em;
 }
 /*--Search section--*/
+.set-height{
+    box-sizing: border-box;
+    height: 45px;
+}
 form.search-bar{
     display: flex;
     align-items: center;
-    width: 600px;
+    max-width: 60%;
+    min-width: 595px;
 }
 #search-icon{
     float: left;
@@ -79,7 +88,7 @@ section p{
 button:last-of-type{
     display: none;
     border-radius: 14px;
-    padding: 1em 1.1em;
+    padding: 0 1.1em;
 }
 /*--cellphone design--*/
 @media (max-width: 600px) {
@@ -135,6 +144,7 @@ button:last-of-type{
     /*--search section--*/
     form.search-bar{
         max-width: 100%;
+        min-width: 300px;
         border-style: solid;
         border-width: 1px 0;
         border-color: #f2f2f2;
@@ -148,6 +158,10 @@ button:last-of-type{
     }
     input[type=text]{
         border: none;
+        box-sizing: content-box;
+        height: auto;
     }
-    
+    input[type=text]:focus{
+        border-color: #0065FC;
+    }
 }
