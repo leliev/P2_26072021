@@ -1,7 +1,29 @@
 body{
+    min-width: 380px;
     font-family: "Raleway", sans-serif;
     margin: auto;
-    padding: 0 10px 0 10px;
+    padding: 0 0.6em;
+}
+h1{
+    margin-bottom: 0.2em;
+}
+input[type=text]{
+    flex-grow: 1;
+    border: 1px solid #f2f2f2;
+    padding: 1em;
+}
+input[type=text]:focus{
+    outline: none;
+    border-color: #0065FC;
+}
+button{
+    float: right;
+    padding: 1em;
+    color: white;
+    font-weight: bold;
+    background-color: #0065FC;
+    border: 1px solid #0065FC;
+    border-radius: 0 14px 14px 0;
 }
 header{
     display: flex;
@@ -9,7 +31,7 @@ header{
     align-items: center;
 }
 #logo{
-    padding-top: 30px;
+    padding-top: 1.88em;
 }
 nav{
     display: flex;
@@ -18,7 +40,7 @@ nav{
 nav a{
     text-decoration: none;
     border: 2px solid transparent;
-    padding: 44px 15px 0 15px;
+    padding: 2.8em 0.9em 0 0.9em;
 }
 nav ul{
     display: flex;
@@ -35,9 +57,35 @@ nav a:hover{
 #sign-in{
     color: #0065FC;
     font-weight: bold;
+    padding: 2.8em 0.9em 0 1em;
+}
+/*--Search section--*/
+form.search-bar{
+    display: flex;
+    align-items: center;
+    width: 600px;
+}
+#search-icon{
+    float: left;
+    background-color: #f2f2f2;
+    font-size: 0.9em;
+    padding: 1em;
+    border: 1px solid #f2f2f2;
+    border-radius: 14px 0 0 14px;
+}
+section p{
+    margin-top: 0.5em;
+}
+button:last-of-type{
+    display: none;
+    border-radius: 14px;
+    padding: 1em 1.1em;
 }
 /*--cellphone design--*/
 @media (max-width: 600px) {
+    body{
+        padding: 0;
+    }
     /*for the logo to stay in place*/
     header{
         align-items: stretch;
@@ -45,6 +93,7 @@ nav a:hover{
     /*putting the logo out of the flexflow*/
     #logo{
         position: absolute;
+        margin-left: 1em;
     }
     nav{
         flex-direction: column-reverse;/*the anchors are put at the bottom*/
@@ -60,13 +109,17 @@ nav a:hover{
         padding-left: 0;
         text-align: center;
     }
-    /*both anchors takes half the screen + border*/
+    /*both anchors takes half the screen*/
     .navlist li{
         width: 50%;
+    }
+    .navlist a{
+        display: inline-block;
+        width: 100%;
         padding-bottom: 12px;
         border-bottom: 2px solid #f2f2f2;
     }
-    .navlist li:hover{
+    .navlist a:hover{
         border-bottom-color: #0065FC;
     }
     /*remove rules for desktop*/
@@ -76,6 +129,25 @@ nav a:hover{
         border: none;
     }
     section{
-        margin-left: 10px;
+        width: 93%;
+        margin: auto;
     }
+    /*--search section--*/
+    form.search-bar{
+        max-width: 100%;
+        border-style: solid;
+        border-width: 1px 0;
+        border-color: #f2f2f2;
+        border-radius: 14px;
+    }
+    button:last-of-type{
+        display: block;
+    }
+    button:nth-last-of-type(2){
+        display: none;
+    }
+    input[type=text]{
+        border: none;
+    }
+    
 }
