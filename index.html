@@ -33,13 +33,33 @@
             <div id="intro">
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
-                <form class="search-bar set-height" action="">
-                    <i id="search-icon" class="fas fa-map-marker-alt set-height"></i>
-                    <input class="set-height" type="text" placeholder="Marseille,France" name="search">
-                    <button class="set-height" type="submit">Rechercher</button>
-                    <button class="set-height" type="submit"><i class="fas fa-search"></i></button>
-                </form>
             </div>
+            <form class="search-bar set-height" action="">
+                <i id="search-icon" class="fas fa-map-marker-alt set-height"></i>
+                <input class="set-height" type="text" placeholder="Marseille,France" name="search">
+                <button id="d-btn" class="set-height" type="submit">Rechercher</button>
+                <button id="m-btn" class="set-height" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <div id="filter-box">
+                <h3>Filtres</h3>
+                <div class="filters">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <button class="filter-btn">&Eacute;conomique</button>
+                </div>
+                <div class="filters">
+                    <i class="fas fa-child"></i>
+                    <button class="filter-btn">Familial</button>
+                </div>
+                <div class="filters">
+                    <i class="fas fa-heart"></i>
+                    <button class="filter-btn">Romantique</button>
+                </div>
+                <div class="filters">
+                    <i class="fas fa-dog"></i>
+                    <button class="filter-btn">Animaux autorisés</button>
+                </div>
+            </div>
+            <p><i id="info-bulle" class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
         </section>
     </main>
 </body>
