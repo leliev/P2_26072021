@@ -1,17 +1,25 @@
+/*--General Style--*/
 body{
     min-width: 380px;
     font-family: "Raleway", sans-serif;
     margin: auto;
     padding: 0 0.6em;
 }
+/*limit width for header and main for very big screen*/
+.limit-width{
+    max-width: 1080px;
+    margin: auto;
+}
 h1{
     margin-bottom: 0.2em;
 }
+/*allow input text box to fill the page*/
 input[type=text]{
     flex-grow: 1;
     border: 1px solid #f2f2f2;
     padding: 1em;
 }
+/*indicates focus with blue border*/
 input[type=text]:focus{
     outline: none;
     border-color: #0065FC;
@@ -25,6 +33,7 @@ button{
     border: 1px solid #0065FC;
     border-radius: 0 14px 14px 0;
 }
+/*--Header Style--*/
 header{
     display: flex;
     justify-content: space-between;
@@ -59,11 +68,17 @@ nav a:hover{
     font-weight: bold;
     padding: 2.8em 0.9em 0 1em;
 }
-/*--Search section--*/
+/*--Search Section--*/
+/*limit height for the child elements of "form"*/
+.set-height{
+    box-sizing: border-box;
+    height: 45px;
+}
 form.search-bar{
     display: flex;
     align-items: center;
-    width: 600px;
+    max-width: 60%;
+    min-width: 595px;/*for nice transition when shortening screen*/
 }
 #search-icon{
     float: left;
@@ -76,16 +91,18 @@ form.search-bar{
 section p{
     margin-top: 0.5em;
 }
+/*hides the button used in mobile design*/
 button:last-of-type{
     display: none;
     border-radius: 14px;
-    padding: 1em 1.1em;
+    padding: 0 1.1em;
 }
-/*--cellphone design--*/
+/*--Mobile Design--*/
 @media (max-width: 600px) {
     body{
         padding: 0;
     }
+    /*--Header Section--*/
     /*for the logo to stay in place*/
     header{
         align-items: stretch;
@@ -128,26 +145,36 @@ button:last-of-type{
         margin: 0;
         border: none;
     }
+    /*--Search Section--*/
     section{
         width: 93%;
         margin: auto;
     }
-    /*--search section--*/
     form.search-bar{
-        max-width: 100%;
+        max-width: 100%;/*can take all section width*/
+        min-width: 300px;
         border-style: solid;
-        border-width: 1px 0;
+        border-width: 1px 0;/*only top and bottom border, left border handled by input*/
         border-color: #f2f2f2;
-        border-radius: 14px;
+        border-radius: 20px 14px 14px 20px;/*hides undesired left and right extremities of the border*/
     }
+    /*use form border to indicates focus on input text*/
+    form.search-bar:focus-within{
+        border-color: #0065FC;
+    }
+    /*display mobile design button*/
     button:last-of-type{
         display: block;
     }
+    /*hides the desktop one*/
     button:nth-last-of-type(2){
         display: none;
     }
     input[type=text]{
-        border: none;
+        border-width: 0 0 0 1px;/*only keep the left border*/
+        height: 43px;/*limit height so form border are visible*/
     }
-    
+    input[type=text]:focus{
+        border-color: #0065FC;
+    }
 }
