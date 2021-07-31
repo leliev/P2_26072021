@@ -7,7 +7,7 @@ body{
 }
 /*limit width for header and main for very big screen*/
 .limit-width{
-    max-width: 1080px;
+    max-width: 1200px;
     margin: auto;
 }
 h1{
@@ -158,7 +158,7 @@ button:last-of-type*/
     align-items: center;
     color: #0065FC;
     background-color: #DEEBFF;
-    height: 37px;
+    height: 36px;
     width: 40px;
     border-radius: 20px;
     border: 2px solid #DEEBFF;
@@ -174,6 +174,7 @@ button:last-of-type*/
     border: none;
     height: 38px;
     border-radius: 20px;
+    font-weight: bold;
 }
 
 #info-bulle{
@@ -189,23 +190,32 @@ button:last-of-type*/
     display: flex;
     justify-content: space-between;
 }
+#housing h3{
+    font-size: 1em;
+    margin: 0 0 0 0.5em;
+}
+#housing p{
+    margin: 0 0 0 0.5em;
+}
+.thumb-box{
+    display: flex;
+}
+.rating-box{
+    margin: 0 0 0 0.5em;
+}
+.rating-box i{
+    font-size: 0.7em;
+}
+/*-search result-*/
 #search-result{
     background-color: #f2f2f2;
-    width: 65%;
+    width: 60%;
     border-radius: 1em;
     padding: 1em;
 }
-#thumb-box{
-    display: flex;
+#search-result div.thumb-box{
     flex-wrap: wrap;
     justify-content: space-around;
-}
-#result-pop{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: #f2f2f2;
-    width: 30%;
 }
 .thumbnail{
     background-color: white;
@@ -213,7 +223,6 @@ button:last-of-type*/
     padding: 0.3em;
     margin-bottom: 1em;
     width: 30%;
-    height: 40%;
 }
 .thumbnail img{
     max-width: 100%;
@@ -222,25 +231,27 @@ button:last-of-type*/
     border-radius: 1em 1em 0 0;
     object-fit: cover;
 }
-.thumbnail h3{
-    font-size: 1em;
-    margin: 0 0 0 0.5em;
-}
-.thumbnail p{
-    font-size: 0.9em;
-    margin: 0.5em 0 0.5em 0.5em;
-}
-.rating-box{
-    margin: 0.5em 0 0.5em 0.5em;
-}
-.rating-box i{
-    font-size: 0.9em;
-}
 #see-more{
     font-size: 1em;
     font-weight: bold;
     border: none;
     padding: 1em 0;
+}
+/*-aside-*/
+#result-pop{
+    background-color: #f2f2f2;
+    width: 30%;
+    border-radius: 1em;
+    padding: 1em;
+}
+#result-pop div.thumb-box{
+    flex-direction: column;
+}
+.aside-thumb{
+    background-color: white;
+    border-radius: 1.1em;
+    padding: 0.3em;
+    margin-bottom: 1em;
 }
 /*--Mobile Design--*/
 @media (max-width: 600px) {
