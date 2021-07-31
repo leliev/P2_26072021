@@ -13,26 +13,6 @@ body{
 h1{
     margin-bottom: 0.2em;
 }
-/*allow input text box to fill the page*/
-input[type=text]{
-    flex-grow: 1;
-    border: 1px solid #f2f2f2;
-    padding: 1em;
-}
-/*indicates focus with blue border*/
-input[type=text]:focus{
-    outline: none;
-    border-color: #0065FC;
-}
-button{
-    float: right;
-    padding: 1em;
-    color: white;
-    font-weight: bold;
-    background-color: #0065FC;
-    border: 1px solid #0065FC;
-    border-radius: 0 14px 14px 0;
-}
 /*--Header Style--*/
 header{
     display: flex;
@@ -78,7 +58,29 @@ form.search-bar{
     display: flex;
     align-items: center;
     max-width: 60%;
-    min-width: 595px;/*for nice transition when shortening screen*/
+    min-width: 540px;/*for nice transition when shortening screen*/
+    border: 1px solid #f2f2f2;
+    border-radius: 0 14px 14px 0;
+}
+form.search-bar:focus-within{
+    border-color: #0065FC;
+}
+.search-bar button{
+    float: right;
+    padding: 1em;
+    color: white;
+    font-weight: bold;
+    background-color: #0065FC;
+    border: 1px solid #0065FC;
+    border-radius: 0 14px 14px 0;
+}
+/*allow input text box to fill the page*/
+.search-bar input[type=text]{
+    flex-grow: 1;
+    border: none;
+    padding: 0 0 0 1em;
+    outline: none;
+    font-size: 1em;
 }
 #search-icon{
     float: left;
@@ -139,6 +141,7 @@ button:last-of-type*/
 }
 .filters:active{
     background-color: #DEEBFF;
+    border-color: #0065FC;
 }
 .filters i{
     display: flex;
@@ -146,7 +149,7 @@ button:last-of-type*/
     align-items: center;
     color: #0065FC;
     background-color: #DEEBFF;
-    height: 40px;
+    height: 37px;
     width: 40px;
     border-radius: 20px;
     border: 2px solid #DEEBFF;
@@ -269,10 +272,6 @@ button:last-of-type*/
     form.search-bar{
         max-width: 100%;/*can take all section width*/
         min-width: 300px;
-        border-style: solid;
-        border-width: 1px 0;/*only top and bottom border, left border handled by input*/
-        border-color: #f2f2f2;
-        border-radius: 20px 14px 14px 20px;/*hides undesired left and right extremities of the border*/
     }
     /*use form border to indicates focus on input text*/
     form.search-bar:focus-within{
@@ -287,13 +286,6 @@ button:last-of-type*/
     button:nth-last-of-type(2)*/
     #d-btn{
         display: none;
-    }
-    input[type=text]{
-        border-width: 0 0 0 1px;/*only keep the left border*/
-        height: 43px;/*limit height so form border are visible*/
-    }
-    input[type=text]:focus{
-        border-color: #0065FC;
     }
     /*--Filters--*/
     
