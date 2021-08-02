@@ -5,6 +5,9 @@ body{
     margin: auto;
     padding: 0 0.6em;
 }
+button{
+    font-family: "Raleway", sans-serif;
+}
 /*limit width for header and main for very big screen*/
 .limit-width{
     max-width: 1200px;
@@ -20,7 +23,7 @@ span{
     color: #0065FC;
 }
 .grey{
-    color: #f2f2f2;
+    color: lightgrey;
 }
 /*--Header Style--*/
 header{
@@ -175,8 +178,8 @@ button:last-of-type*/
     height: 38px;
     border-radius: 20px;
     font-weight: bold;
+    font-size: 1em;
 }
-
 #info-bulle{
     margin-right: 1em;
     padding: 3px 6px;
@@ -184,24 +187,33 @@ button:last-of-type*/
     color: #0065FC;
     border: 2px solid #f2f2f2;
     border-radius: 20px;
+    float: left;
 }
 /*--Housing Section--*/
 #housing{
     display: flex;
     justify-content: space-between;
 }
+#housing h2{
+    font-size: 1.2em;
+    margin-top: 0.4em;
+}
 #housing h3{
     font-size: 1em;
-    margin: 0 0 0 0.5em;
+    font-weight: 720;
 }
 #housing p{
-    margin: 0 0 0 0.5em;
+    font-size: 0.9em;
 }
 .thumb-box{
     display: flex;
 }
+.thumb-box a{
+    box-shadow: 2px 2px 5px lightgrey;
+}
 .rating-box{
-    margin: 0 0 0 0.5em;
+    letter-spacing: -1px;
+    margin: 0 0 0.2em 0.5em;
 }
 .rating-box i{
     font-size: 0.7em;
@@ -211,27 +223,33 @@ button:last-of-type*/
     background-color: #f2f2f2;
     width: 60%;
     border-radius: 1em;
-    padding: 1em;
+    padding: 1.5em;
 }
 #search-result div.thumb-box{
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .thumbnail{
     background-color: white;
     border-radius: 1.1em;
     padding: 0.3em;
     margin-bottom: 1em;
-    width: 30%;
+}
+.thumbnail h3{
+    margin: 0.2em 0 0 0.5em;
+}
+.thumbnail p{
+    margin: 0.2em 0.5em;
 }
 .thumbnail img{
     max-width: 100%;
     width: 220px;
-    height: 100px;
+    height: 105px;
     border-radius: 1em 1em 0 0;
     object-fit: cover;
 }
 #see-more{
+    background: none;
     font-size: 1em;
     font-weight: bold;
     border: none;
@@ -242,16 +260,40 @@ button:last-of-type*/
     background-color: #f2f2f2;
     width: 30%;
     border-radius: 1em;
-    padding: 1em;
+    padding: 1.5em;
 }
 #result-pop div.thumb-box{
     flex-direction: column;
 }
+.fa-chart-line{
+    float: right;
+}
 .aside-thumb{
     background-color: white;
     border-radius: 1.1em;
-    padding: 0.3em;
+    padding: 0.3em 3em 0.3em 0.3em;
     margin-bottom: 1em;
+    position: relative;
+}
+.aside-thumb h3{
+    margin: 1em 0 0 0;
+}
+.aside-thumb p{
+    margin: 0.4em 0;
+}
+.aside-thumb img{
+    max-width: 100%;
+    width: 130px;
+    height: 130px;
+    border-radius: 1em 0 0 1em;
+    object-fit: cover;
+    float: left;
+    margin-right: 1em;
+}
+.aside-thumb div.rating-box{
+    position: absolute;
+    bottom: 0.5em;
+    left: 143px;
 }
 /*--Mobile Design--*/
 @media (max-width: 600px) {
@@ -332,4 +374,34 @@ button:last-of-type*/
     .filters{
         margin-bottom: 1em;/*replace the margin-bottom of the h3*/
     }
+    /*--Housing Section--*/
+    #housing{
+        flex-direction: column-reverse;
+    }
+    #result-pop{
+        width: initial;
+        border-radius: 0;
+        padding: 1em;
+    }
+    .aside-thumb{
+        padding: 0.3em;
+    }
+    .aside-thumb img{
+        width: 115px;
+    }
+    .aside-thumb div.rating-box{
+        left: 128px;
+    } 
+    #search-result{
+        width: initial;
+        background: none;
+        padding: 1em;
+    }
+    .thumbnail{
+        width: 100%;
+    }
+    .thumbnail img{
+        width: 100%;
+    }
+
 }
