@@ -265,6 +265,9 @@ button:last-of-type*/
 #result-pop div.thumb-box{
     flex-direction: column;
 }
+#result-pop a:last-of-type{
+    margin-bottom: 0;
+}
 .fa-chart-line{
     float: right;
 }
@@ -273,7 +276,7 @@ button:last-of-type*/
     border-radius: 1.1em;
     padding: 0.3em 3em 0.3em 0.3em;
     margin-bottom: 1em;
-    position: relative;
+    position: relative;/*for the rating-box placement*/
 }
 .aside-thumb h3{
     margin: 1em 0 0 0;
@@ -379,7 +382,7 @@ button:last-of-type*/
         flex-direction: column-reverse;
     }
     #result-pop{
-        width: initial;
+        width: initial;/*to take the whole width of housing section*/
         border-radius: 0;
         padding: 1em;
     }
@@ -393,7 +396,7 @@ button:last-of-type*/
         left: 128px;
     } 
     #search-result{
-        width: initial;
+        width: initial;/*to take the whole width of housing section*/
         background: none;
         padding: 1em;
     }
