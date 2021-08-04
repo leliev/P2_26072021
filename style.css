@@ -1,6 +1,6 @@
 /*--General Style--*/
 body{
-    min-width: 380px;
+    min-width: 400px;
     font-family: "Raleway", sans-serif;
     margin: auto;
     padding: 0 0.6em;
@@ -15,6 +15,20 @@ button{
 }
 h1{
     margin-bottom: 0.2em;
+}
+h2{
+    font-size: 1.2em;
+}
+h3{
+    font-size: 1em;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style-type: none;
+    padding: 0px;
 }
 span{
     font-weight: bold;
@@ -39,13 +53,11 @@ nav{
     align-items: baseline;
 }
 nav a{
-    text-decoration: none;
     border: 2px solid transparent;
     padding: 2.8em 0.9em 0 0.9em;
 }
 nav ul{
     display: flex;
-    list-style-type: none;
 }
 .anchors{
     color: black;
@@ -69,8 +81,7 @@ nav a:hover{
 form.search-bar{
     display: flex;
     align-items: center;
-    max-width: 60%;
-    min-width: 540px;/*for nice transition when shortening screen*/
+    width: 320px;
     border: 1px solid #f2f2f2;
     border-radius: 0 14px 14px 0;
 }
@@ -79,8 +90,9 @@ form.search-bar:focus-within{
 }
 .search-bar button{
     float: right;
-    padding: 1em;
+    padding: 0 1em;
     color: white;
+    font-size: 1em;
     font-weight: bold;
     background-color: #0065FC;
     border: 1px solid #0065FC;
@@ -93,6 +105,7 @@ form.search-bar:focus-within{
     padding: 0 0 0 1em;
     outline: none;
     font-size: 1em;
+    font-weight: bold;
 }
 #search-icon{
     float: left;
@@ -195,12 +208,7 @@ button:last-of-type*/
     justify-content: space-between;
 }
 #housing h2{
-    font-size: 1.2em;
     margin-top: 0.4em;
-}
-#housing h3{
-    font-size: 1em;
-    font-weight: 720;
 }
 #housing p{
     font-size: 0.9em;
@@ -210,6 +218,10 @@ button:last-of-type*/
 }
 .thumb-box a{
     box-shadow: 2px 2px 5px lightgrey;
+}
+.thumb-box a:hover{
+    transform: scale(1.1);
+    z-index: 2;
 }
 .rating-box{
     letter-spacing: -1px;
@@ -298,6 +310,71 @@ button:last-of-type*/
     bottom: 0.5em;
     left: 143px;
 }
+/*--Activity Section--*/
+#activity{
+    margin-top: 2.5em;
+}
+#box-wrapper{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2em;
+}
+#box-wrapper div.activity-box{
+    display: grid;
+    grid-template: 240px 160px / auto auto;
+    gap: 2em;
+}
+#box-wrapper div.activity-box:last-of-type{
+    grid-template: 200px 200px / auto auto;
+}
+.activity-box a{
+    position: relative;
+    border-radius: 1em;
+    box-shadow: 2px 2px 5px lightgrey;
+}
+.activity-box h3{
+    padding-left: 1em;
+    margin: 1.1em 0;
+}
+.activity-title{
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    bottom: 0;
+    border-radius: 0 0 1em 1em;
+}
+.big{
+    grid-row: 1 / 3;
+}
+.activity-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1em;
+}
+.activity-box a:hover{
+    transform: scale(0.9);
+}
+/*--Footer Section--*/
+footer{
+    background-color: #f2f2f2;
+    display: flex;
+    margin-top: 2.5em;
+    padding: 2em;
+}
+footer div{
+    width: 30%;
+    padding-left: 1em;
+}
+footer h3{
+    font-size: 1.1em;
+}
+footer li{
+    padding: 0.4em 0;
+}
+footer a:hover{
+    text-decoration: underline;
+}
 /*--Mobile Design--*/
 @media (max-width: 600px) {
     body{
@@ -351,10 +428,6 @@ button:last-of-type*/
         width: 93%;
         margin: auto;
     }
-    form.search-bar{
-        max-width: 100%;/*can take all section width*/
-        min-width: 300px;
-    }
     /*use form border to indicates focus on input text*/
     form.search-bar:focus-within{
         border-color: #0065FC;
@@ -379,6 +452,7 @@ button:last-of-type*/
     }
     /*--Housing Section--*/
     #housing{
+        width: 100%;
         flex-direction: column-reverse;
     }
     #result-pop{
@@ -400,11 +474,23 @@ button:last-of-type*/
         background: none;
         padding: 1em;
     }
-    .thumbnail{
+    .thumbnail, .thumbnail img{
         width: 100%;
     }
-    .thumbnail img{
-        width: 100%;
+    /*--Activity Section--*/
+    #box-wrapper, #box-wrapper div.activity-box{
+        display: flex;
+        flex-direction: column;
     }
-
+    .activity-box img{
+        height: 200px;
+    }
+    /*--Footer Section--*/
+    footer{
+        flex-direction: column;
+    }
+    footer div{
+        width: 100%;
+        padding-left: 0;
+    }
 }
