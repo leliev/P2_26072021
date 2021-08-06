@@ -97,6 +97,7 @@ form.search-bar:focus-within{
     background-color: #0065FC;
     border: 1px solid #0065FC;
     border-radius: 0 14px 14px 0;
+    cursor: pointer;
 }
 /*allow input text box to fill the page*/
 .search-bar input[type=text]{
@@ -193,7 +194,7 @@ button:last-of-type*/
     font-weight: bold;
     font-size: 1em;
 }
-#info-bulle{
+#info-bubble{
     margin-right: 1em;
     padding: 3px 6px;
     font-size: 10px;
