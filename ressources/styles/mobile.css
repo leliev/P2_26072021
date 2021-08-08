@@ -55,13 +55,11 @@
     form.search-bar:focus-within{
         border-color: #0065FC;
     }
-    /*display mobile design button
-    button:last-of-type*/
+    /*display mobile design button*/
     #m-btn{
         display: block;
     }
-    /*hides the desktop one
-    button:nth-last-of-type(2)*/
+    /*hides the desktop one*/
     #d-btn{
         display: none;
     }
@@ -75,7 +73,6 @@
     }
     /*--Housing Section--*/
     #housing{
-        width: 100%;
         flex-direction: column-reverse;
     }
     #result-pop{
@@ -109,10 +106,11 @@
         height: 200px;
     }
     /*--Footer Section--*/
-    footer{
+    #wrapper{
         flex-direction: column;
+        padding: 1em;
     }
-    footer div{
+    #wrapper div{
         width: 100%;
         padding-left: 0;
     }
