@@ -3,7 +3,6 @@ body{
     min-width: 400px;
     font-family: "Raleway", sans-serif;
     margin: auto;
-    padding: 0 0.6em;
 }
 button{
     font-family: "Raleway", sans-serif;
@@ -12,6 +11,7 @@ button{
 .limit-width{
     max-width: 1200px;
     margin: auto;
+    padding: 0 0.6em;
 }
 h1{
     margin-bottom: 0.2em;
@@ -291,6 +291,10 @@ button:last-of-type*/
     margin-bottom: 1em;
     position: relative;/*for the rating-box placement*/
 }
+.img-info{
+    display: flex;
+    flex-direction: column;
+}
 .aside-thumb h3{
     margin: 1em 0 0 0;
 }
@@ -375,123 +379,4 @@ footer li{
 }
 footer a:hover{
     text-decoration: underline;
-}
-/*--Mobile Design--*/
-@media (max-width: 600px) {
-    body{
-        padding: 0;
-    }
-    /*--Header Section--*/
-    /*for the logo to stay in place*/
-    header{
-        align-items: stretch;
-    }
-    /*putting the logo out of the flexflow*/
-    #logo{
-        position: absolute;
-        margin-left: 1em;
-    }
-    nav{
-        flex-direction: column-reverse;/*the anchors are put at the bottom*/
-        align-items: flex-end;/*sign-in stay on the right*/
-        width: 100%;/*the flexbox takes the whole width*/
-    }
-    .navlist{
-        width: 100%;/*the anchors takes the whole width*/
-        margin-top: 15px;
-    }
-    /*center the anchors text*/
-    nav ul{
-        padding-left: 0;
-        text-align: center;
-    }
-    /*both anchors takes half the screen*/
-    .navlist li{
-        width: 50%;
-    }
-    .navlist a{
-        display: inline-block;
-        width: 100%;
-        padding-bottom: 12px;
-        border-bottom: 2px solid #f2f2f2;
-    }
-    .navlist a:hover{
-        border-bottom-color: #0065FC;
-    }
-    /*remove rules for desktop*/
-    .anchors{
-        padding: 0;
-        margin: 0;
-        border: none;
-    }
-    /*--Search Section--*/
-    section{
-        width: 93%;
-        margin: auto;
-    }
-    /*use form border to indicates focus on input text*/
-    form.search-bar:focus-within{
-        border-color: #0065FC;
-    }
-    /*display mobile design button
-    button:last-of-type*/
-    #m-btn{
-        display: block;
-    }
-    /*hides the desktop one
-    button:nth-last-of-type(2)*/
-    #d-btn{
-        display: none;
-    }
-    /*--Filters--*/
-    
-    #filter-box h3{
-        width: 100%;/*the title takes the whole line to put the filters under*/
-    }
-    .filters{
-        margin-bottom: 1em;/*replace the margin-bottom of the h3*/
-    }
-    /*--Housing Section--*/
-    #housing{
-        width: 100%;
-        flex-direction: column-reverse;
-    }
-    #result-pop{
-        width: initial;/*to take the whole width of housing section*/
-        border-radius: 0;
-        padding: 1em;
-    }
-    .aside-thumb{
-        padding: 0.3em;
-    }
-    .aside-thumb img{
-        width: 115px;
-    }
-    .aside-thumb div.rating-box{
-        left: 128px;
-    } 
-    #search-result{
-        width: initial;/*to take the whole width of housing section*/
-        background: none;
-        padding: 1em;
-    }
-    .thumbnail, .thumbnail img{
-        width: 100%;
-    }
-    /*--Activity Section--*/
-    #box-wrapper, #box-wrapper div.activity-box{
-        display: flex;
-        flex-direction: column;
-    }
-    .activity-box img{
-        height: 200px;
-    }
-    /*--Footer Section--*/
-    footer{
-        flex-direction: column;
-    }
-    footer div{
-        width: 100%;
-        padding-left: 0;
-    }
 }
