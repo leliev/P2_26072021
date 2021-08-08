@@ -1,0 +1,42 @@
+/*--Tablet Design--*/
+@media screen and (max-width: 1190px) and (min-width: 601px) {
+    /*--Housing Section--*/
+    #housing{
+        flex-direction: column-reverse;
+    }
+    #result-pop{
+        width: initial;
+        margin-bottom: 1em;
+    }
+    #result-pop a{
+        flex: 1;
+    }
+    #search-result{
+        width: initial;
+    }
+    .aside-thumb img{
+        width: 50%;
+    }
+    .aside-thumb div.rating-box{
+        left: 48%;
+    }
+    .thumbnail{
+        width: 30%;
+        min-width: 255px;
+        margin: 1em 0.5em;
+        flex: 1;
+    }
+    .thumbnail img{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 800px) {
+    /*--Activity Section--*/
+    #box-wrapper, #box-wrapper div.activity-box{
+        display: flex;
+        flex-direction: column;
+    }
+    .activity-box img{
+        height: 200px;
+    }
+}
