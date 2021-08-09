@@ -9,7 +9,7 @@
         margin-bottom: 1em;
     }
     #result-pop a{
-        flex: 1;
+        flex: 1;/*can take all the space*/
     }
     #search-result{
         width: initial;
@@ -18,7 +18,7 @@
         width: 50%;
     }
     .aside-thumb div.rating-box{
-        left: 48%;
+        left: 48%;/*to be responsive with the img resize*/
     }
     .thumbnail{
         width: 30%;
@@ -28,6 +28,10 @@
     }
     .thumbnail img{
         width: 100%;
+    }
+    /*--Footer Section--*/
+    #wrapper{
+        justify-content: space-around;
     }
 }
 @media screen and (max-width: 800px) {

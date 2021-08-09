@@ -363,11 +363,15 @@ button:last-of-type*/
 /*--Footer Section--*/
 footer{
     background-color: #f2f2f2;
-    display: flex;
     margin-top: 2.5em;
-    padding: 2em;
+    padding: 2em 0;
 }
-footer div{
+#wrapper{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+}
+#wrapper div{
     width: 30%;
     padding-left: 1em;
 }
