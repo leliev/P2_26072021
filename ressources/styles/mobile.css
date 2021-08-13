@@ -3,11 +3,11 @@
     .limit-width{
         padding: 0;
     }
-    /*--Header Section--*/
-    /*for the logo to stay in place*/
-    header{
-        align-items: stretch;
+    section{
+        width: 93%;
+        margin: auto;
     }
+    /*--Header Section--*/
     /*putting the logo out of the flexflow*/
     #logo{
         position: absolute;
@@ -47,10 +47,6 @@
         border: none;
     }
     /*--Search Section--*/
-    section{
-        width: 93%;
-        margin: auto;
-    }
     /*use form border to indicates focus on input text*/
     form.search-bar:focus-within{
         border-color: #0065FC;

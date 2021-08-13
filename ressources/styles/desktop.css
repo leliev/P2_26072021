@@ -43,7 +43,6 @@ span{
 header{
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 #logo{
     padding-top: 1.88em;
@@ -54,14 +53,14 @@ nav{
 }
 nav a{
     border: 2px solid transparent;
-    padding: 2.8em 0.9em 0 0.9em;
+
 }
 nav ul{
     display: flex;
 }
 .anchors{
-    color: black;
     margin: 0 30px 0 30px;
+    padding: 2.8em 0.9em 0 0.9em;
 }
 nav a:hover{
     color: #0065FC;
@@ -144,9 +143,9 @@ button:last-of-type*/
     height: 40px;
     border-radius: 22px;/*slightly more to cover the blanks*/
     position: relative;/*for the transition of the background on hover*/
-    z-index: 1;
+    /*z-index: 1;*/
     background: none;
-    transition:         0.08s ease-in;
+    transition: 0.08s ease-in;
     -webkit-transition: 0.08s ease-in;
 }
 .filters:before{/*the background itself*/
@@ -181,16 +180,16 @@ button:last-of-type*/
     border: 2px solid #DEEBFF;
 }
 .filter-btn{
-    display: block;
+    /*display: block;
     outline: none;
+    height: 38px;
+    border-radius: 20px;*/
     cursor: pointer;
     color: black;
     background: none;
     padding: 0;
     margin: 1em;
     border: none;
-    height: 38px;
-    border-radius: 20px;
     font-weight: bold;
     font-size: 1em;
 }
